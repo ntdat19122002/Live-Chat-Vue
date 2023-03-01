@@ -8,7 +8,7 @@
     </div>
     <div v-else>
       <h2>Sign up</h2>
-      <SignupForm/>
+      <SignupForm @signup="enterChat"/>
       <p>Already registered? <span @click="showLogin = !showLogin">Login</span> instead</p>
     </div>
     
@@ -28,10 +28,10 @@ export default {
     const router = useRouter()
 
     const enterChat = ()=> {
-      router.push({name:''})
+      router.push({name:'Chatroom'})
     }
 
-    return { showLogin }
+    return { showLogin,enterChat }
   }
 }
 </script>
